@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <H1>
+        JS form
+    </H1>
+    <form>
+        <input
+        type="text"
+        placeholder="type a name"
+        autocomplete="off"
+        autofocus="on"
+        id="searchForSomthing"
+        />
+        <input 
+        type="submit" value="search" 
+        />
+    </form>
+<script>
+    function search (event){
+        event.preventDefault();
+        let submitForm= document.querySelector("searchForSomthing");
+        console.log(searchForSomthing.value)
+        let h1= document.querySelector("h1")
+        if (searchForSomthing.value){
+        h1.innerHTML = `searching for ${searchForSomthing.value}....`;
+        }
+        else
+        {
+            h1.innerHTML= `type something`;
+        }
+    }
+let form = document.querySelector("form");
+form.addEventListener("submit", search);
+</script>
+</body>
+</html>
